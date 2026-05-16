@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Predictors of Adolescent Stress: Johanna Escudero</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="../index.html" class="brand">Johanna <span class="brand-mark">Escudero</span></a>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="../work.html" class="active">Work</a>
+      <a href="../writing.html">Writing</a>
+      <a href="../about.html">About</a>
+      <a href="../cv.html">CV</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="article">
+    <div class="container">
+
+      <header class="article-header">
+        <p class="eyebrow">Quantitative Analysis</p>
+        <h1>Predictors of Adolescent Stress: a Regression Study</h1>
+        <p class="lede">
+          A multivariable linear regression analysis in a cohort of 1,332 adolescents, with full diagnostic assessment, confounder testing, and interaction analysis, and a plain-language summary translating the findings for non-technical audiences.
+        </p>
+      </header>
+
+      <div class="article-body">
+
+        <div class="prose">
+
+          <div class="notice">
+            <p><strong>Academic context.</strong> Prepared as the major assessment for PUBH 726 Applied Biostatistics 2 (Regression Methods), Postgraduate Diploma in Public Health, University of Otago (2025). The dataset was provided by the course and is not real-world data; the analysis was conducted independently. The diploma was completed with distinction overall.</p>
+          </div>
+
+          <h2>About this project</h2>
+          <p>
+            The primary research question was whether weekly exercise time was associated with stress levels in adolescents aged 11 to 18, after adjustment for other plausible predictors. A secondary question asked whether sleep duration showed any independent association with stress, and whether that association varied by age.
+          </p>
+          <p>
+            The exercise was deliberately constructed to test the analytical workflow end-to-end: data integrity, model building, confounder identification, diagnostic checking, sensitivity analysis, and lay translation. None of these steps is glamorous in isolation; the value is in doing all of them carefully and honestly.
+          </p>
+
+          <h2>Approach</h2>
+          <ol>
+            <li><strong>Data preparation.</strong> Each variable was checked for missingness, duplication, and implausible values. A single participant reporting 170 hours of weekly exercise was excluded as implausible (the maximum hours in a week is 168). The final analytical sample was 1,332 adolescents.</li>
+            <li><strong>Descriptive statistics.</strong> A standard Table 1 was produced summarising the sample, with means, standard deviations, and medians used appropriately depending on the distribution of each variable.</li>
+            <li><strong>Model building.</strong> A full model was fitted with exercise time, age, sex, BMI, and sleep duration. Multicollinearity was checked using variance inflation factors. Backwards elimination was used to remove non-significant predictors, with each candidate for removal tested as a potential confounder of the exposure–outcome relationship using the 10% change rule.</li>
+            <li><strong>Diagnostics.</strong> Linearity was assessed via scatterplots of stress against each continuous predictor. Homoscedasticity was assessed via a plot of residuals against fitted values. Normality of residuals was assessed via histogram and Q-Q plot. Influential points were assessed using DFBETA.</li>
+            <li><strong>Interaction.</strong> For the secondary question, an interaction term between sleep duration and centred age was tested in a separate model.</li>
+          </ol>
+
+          <h2>Key findings</h2>
+          <ul>
+            <li>After adjustment for age, sex, and sleep duration, exercise time was not significantly associated with stress (coefficient 0.004 per additional weekly hour; 95% CI −0.018 to 0.027; p = 0.71). The confidence interval comfortably included zero.</li>
+            <li>Age was associated with higher stress (0.61 points per year of age; 95% CI 0.38 to 0.85; p &lt; 0.001).</li>
+            <li>Male sex was associated with lower stress (−0.77; 95% CI −1.23 to −0.31; p = 0.001).</li>
+            <li>Sleep duration of 8 or more hours was associated with substantially lower stress (−1.35; 95% CI −1.82 to −0.88; p &lt; 0.001).</li>
+            <li>The interaction between sleep duration and centred age was not statistically significant (p = 0.53), suggesting that the protective association of adequate sleep does not vary meaningfully by age within this adolescent range.</li>
+            <li>The final model explained 6.1% of the variation in stress, a modest R² that is honest about the limits of what the available predictors can do.</li>
+          </ul>
+
+          <h2>Lay summary</h2>
+          <blockquote>
+            In this group of 1,333 adolescents, the amount of weekly exercise was not associated with how stressed they reported feeling. However, adolescents who got less than eight hours of sleep, who were older, and who were female all tended to report higher stress, and these patterns held after accounting for the other factors. The strongest takeaway is that sleep matters: getting eight or more hours a night was associated with meaningfully lower stress regardless of age, sex, or how much the adolescent exercised.
+          </blockquote>
+
+          <h2>What this project demonstrates</h2>
+          <p>
+            This piece is the closest thing in the portfolio to a standalone data analysis project. It demonstrates capability with multivariable linear regression, model diagnostics, confounder testing, interaction analysis, and, perhaps most importantly for applied work, the discipline of translating a statistical model into language a Minister, a policy team, or a community board can actually use.
+          </p>
+
+        </div>
+
+        <aside class="sidebar">
+          <div class="meta-block">
+            <h4>Method</h4>
+            <p>Multivariable linear regression with full diagnostics</p>
+          </div>
+          <div class="meta-block">
+            <h4>Sample</h4>
+            <p>1,332 adolescents (after data cleaning)</p>
+          </div>
+          <div class="meta-block">
+            <h4>Software</h4>
+            <p>Stata</p>
+          </div>
+          <div class="meta-block">
+            <h4>Techniques</h4>
+            <p>Multivariable OLS regression; VIF; DFBETA; Q-Q plots; interaction testing; lay translation</p>
+          </div>
+          <div class="meta-block">
+            <h4>Year</h4>
+            <p>2025</p>
+          </div>
+          <a href="../assets/Regression_Analysis_original.pdf" class="download-btn" download>
+            Download PDF <span class="arrow">↓</span>
+          </a>
+        </aside>
+
+      </div>
+
+    </div>
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>© Johanna Escudero Pino, 2026. Wellington, Aotearoa New Zealand.</div>
+      <div><a href="mailto:joescudero@hotmail.com">joescudero@hotmail.com</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

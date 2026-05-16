@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact: Johanna Escudero Pino</title>
+<meta name="description" content="Get in touch with Johanna Escudero Pino, public health analyst based in Wellington, Aotearoa New Zealand.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="brand">Johanna <span class="brand-mark">Escudero</span></a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="writing.html">Writing</a>
+      <a href="about.html">About</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container-narrow">
+      <p class="eyebrow">Contact</p>
+      <h1>Open to conversations.</h1>
+      <p class="lede">
+        I am open to permanent and fixed-term analyst, policy, and research roles in Aotearoa, and to contract and freelance work for the New Zealand public sector, universities, policy consultancies, and private health businesses needing analytical, regulatory, or writing support. Bilingual English/Spanish.
+      </p>
+    </div>
+  </section>
+
+  <section style="padding-top: 0;">
+    <div class="container-narrow">
+
+      <div class="contact-grid">
+
+        <div class="contact-item">
+          <h4>Email</h4>
+          <p><a href="mailto:joescudero@hotmail.com">joescudero@hotmail.com</a></p>
+        </div>
+
+        <div class="contact-item">
+          <h4>LinkedIn</h4>
+          <p><a href="#" target="_blank" rel="noopener">linkedin.com/in/johannaescudero</a></p>
+        </div>
+
+        <div class="contact-item">
+          <h4>Location</h4>
+          <p>Wellington, Aotearoa New Zealand</p>
+        </div>
+
+        <div class="contact-item">
+          <h4>Languages</h4>
+          <p>English &middot; Spanish</p>
+        </div>
+
+      </div>
+
+      <hr class="divider">
+
+      <h2 style="font-size: 1.5rem;">What I'm open to right now</h2>
+      <ul>
+        <li>Permanent or fixed-term analyst, policy, and research roles, in Aotearoa's public health system, universities, policy consultancies, or private health and dental businesses.</li>
+        <li>Contract and freelance projects: policy and regulatory writing, evidence reviews, health impact assessments, structured data analysis, and health content. Particular interest in work focused on health equity and underserved populations.</li>
+        <li>Remote contract work for organisations outside Aotearoa, particularly in the US, UK, and global digital health markets, where bilingual English/Spanish health content, health promotion, and comparative health systems work are useful.</li>
+        <li>Coffee with people working in or adjacent to public health, oral health, or the dental sector in Aotearoa.</li>
+      </ul>
+
+      <p style="margin-top: 2em; color: var(--muted); font-size: 0.95rem;">
+        References available on request.
+      </p>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="container-narrow">
+
+      <p class="eyebrow">Send a message</p>
+      <h2 style="font-size: 1.9rem; margin-bottom: 0.3em;">Get in touch</h2>
+      <p style="color: var(--ink-soft); margin-bottom: 2em;">
+        Whether you have a work opportunity, contract or permanent, or simply want to connect about public health, oral health, or anything else, I would love to hear from you.
+      </p>
+
+      <form class="contact-form" id="contactForm" novalidate>
+
+        <div class="form-field">
+          <label for="senderEmail">Your email address</label>
+          <input
+            type="email"
+            id="senderEmail"
+            name="senderEmail"
+            placeholder="you@example.com"
+            required
+            autocomplete="email"
+          >
+          <span class="field-hint">So I can write back to you.</span>
+        </div>
+
+        <div class="form-field">
+          <label for="message">Your message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="7"
+            placeholder="Tell me a little about what you have in mind, a role, a project, or just a coffee catch-up."
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">Send message</button>
+        </div>
+
+      </form>
+
+      <div class="form-toast form-toast--success" id="toastSuccess" hidden>
+        Message opened in your email client, thank you for getting in touch.
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>© Johanna Escudero Pino, 2026. Wellington, Aotearoa New Zealand.</div>
+      <div><a href="mailto:joescudero@hotmail.com">joescudero@hotmail.com</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var form = document.getElementById('contactForm');
+  var emailInput = document.getElementById('senderEmail');
+  var messageInput = document.getElementById('message');
+  var toastSuccess = document.getElementById('toastSuccess');
+
+  function setError(input, msg) {
+    var field = input.closest('.form-field');
+    var existing = field.querySelector('.field-error');
+    if (existing) existing.remove();
+    if (msg) {
+      input.classList.add('input-error');
+      var err = document.createElement('span');
+      err.className = 'field-error';
+      err.textContent = msg;
+      field.appendChild(err);
+    } else {
+      input.classList.remove('input-error');
+    }
+  }
+
+  emailInput.addEventListener('input', function() { setError(emailInput, ''); });
+  messageInput.addEventListener('input', function() { setError(messageInput, ''); });
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var email = emailInput.value.trim();
+    var message = messageInput.value.trim();
+    var valid = true;
+
+    if (!email) {
+      setError(emailInput, 'Please enter your email address so Johanna can reply.');
+      valid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setError(emailInput, 'That doesn\'t look like a valid email address.');
+      valid = false;
+    } else {
+      setError(emailInput, '');
+    }
+
+    if (!message) {
+      setError(messageInput, 'Please write a message before sending.');
+      valid = false;
+    } else {
+      setError(messageInput, '');
+    }
+
+    if (!valid) return;
+
+    var subject = encodeURIComponent('Public Health');
+    var body = encodeURIComponent('From: ' + email + '\n\n' + message);
+    window.location.href = 'mailto:joescudero@hotmail.com?subject=' + subject + '&body=' + body;
+
+    toastSuccess.hidden = false;
+    toastSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    form.reset();
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-Command pandoc -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command extract-text -ErrorAction SilentlyContinue)",
+      "Bash(cp \"C:\\\\Users\\\\tomrn\\\\Downloads\\\\PUBH 742 Assignment 1.docx\" \"C:\\\\Users\\\\tomrn\\\\Documents\\\\Johanna\\\\website\\\\assets\\\\PUBH742_Assignment1.docx\")",
+      "Bash(cp \"C:\\\\Users\\\\tomrn\\\\Downloads\\\\PUBH 713 - Assignment 2.docx\" \"C:\\\\Users\\\\tomrn\\\\Documents\\\\Johanna\\\\website\\\\assets\\\\PUBH713_Assignment2.docx\")"
+    ]
+  }
+}
