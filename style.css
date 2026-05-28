@@ -65,7 +65,7 @@ body {
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'kern', 'liga', 'calt';
+  font-feature-settings: 'kern', 'liga', 'calt', 'mark', 'mkmk';
 }
 
 /* Subtle grain texture — tactile, printed feel */
